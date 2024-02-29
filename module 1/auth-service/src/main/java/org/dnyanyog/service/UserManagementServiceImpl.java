@@ -170,25 +170,5 @@ public class UserManagementServiceImpl implements UserManagementService {
 		}
 	}
 
-	public DiscountResponse discountUser(DiscountRequest request) {
-
-		DiscountResponse discountResponse = new DiscountResponse();
-
-		int discount;
-
-		int price = 5000;
-
-		int age = request.getAge();
-
-		if (age > 30 && request.getGender() == "M") {
-			discount = ((price * 10) / 100);
-			price = price - discount;
-
-			discountResponse.setAfterDiscountPrice(price);
-
-		}
-
-		return discountResponse;
-	}
-
+	
 }
